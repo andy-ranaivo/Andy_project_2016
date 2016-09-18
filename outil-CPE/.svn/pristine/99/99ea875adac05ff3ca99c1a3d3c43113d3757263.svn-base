@@ -1,0 +1,55 @@
+<div id="content"><h1 class="content-heading bg-white border-bottom hidden">TRAITEMENT</h1> 
+<div class="innerAll">
+
+    	
+<!-- CONTENT -->
+<div class="row">
+	<div class="col-lg-1">
+	</div>	
+	<div class="col-lg-10">	
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<?php 
+				if(!empty($traitement)){
+					foreach ($traitement as $val_trait) {
+					
+			?>
+				<div class="col-md-2 columns">
+					<div class="titre_contenu">
+						
+					</div>
+					<div class="button2">
+						<?php 
+						if($val_trait->process_id == "0"){
+						?>
+						
+							<a href="<?php echo site_url('front/accueil_operation/'.$val_trait->cey_traitement_id) ?>" class="titre_bouton"><?php echo ascii_to_entities($val_trait->info_traitement);?></a>
+						
+						<?php 
+						}else{
+						?>
+
+							<a href="<?php echo site_url('front/accueil_processus/'.$val_trait->process_id) ?>" class="titre_bouton"><?php echo ascii_to_entities($val_trait->info_traitement);?></a>
+
+						<?php 
+						}
+						?>					
+
+					</div>	   
+				</div>
+			<?php 
+					}
+				}
+			?>
+			<div class="col-md-1">
+			</div>
+			
+		</div>
+	</div>
+	<div class="col-lg-1">
+	</div>
+</div>
+<!-- END CONTENT -->
+		
+		

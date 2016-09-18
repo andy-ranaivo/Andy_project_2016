@@ -1,0 +1,26 @@
+<div id="content"><h1 class="content-heading bg-white border-bottom hidden">CATEGORIES</h1> 
+<div class="innerAll">
+
+    	
+<!-- CONTENT -->
+<div class="row">
+	<div class="col-lg-8 col-lg-offset-2">
+		<div class="row">
+			<?php 
+				if(!empty($categories)){
+					foreach ($categories as $val_cat) {
+					
+			?>
+				<div class="col-md-3 columns">
+					<div class="button"><a href="<?php echo site_url('front/accueil_traitement/'.$val_cat->cey_categorie_id); ?>" class="titre_bouton"><?php echo ascii_to_entities($val_cat->info_categorie);?></a></div>	   
+				</div>
+			<?php 
+					}
+				}
+			?>
+		</div>
+	</div>
+</div>
+<!-- END CONTENT -->
+		
+		
